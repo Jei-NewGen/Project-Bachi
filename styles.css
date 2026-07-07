@@ -1,0 +1,174 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(black);
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.HeadTitle{
+position: absolute;
+top: 0px;
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.navbar{
+    border: 1px solid red;
+    position: sticky;
+    background-color: red;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.banner{
+    position: absolute;
+    top: 190px;
+    width: 60%;
+    height: 200px;
+    font-weight: bold;
+  
+}
+
+.banner-img{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner-img:hover{
+    transform: scale(1.05);
+    border: 2px solid red;
+}
+
+.about{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+a:hover{
+    color: white;
+    
+}
+
+.news-details{
+    color: red;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;   
+    
+}
+ 
+.Anime-Title{
+    color: red;
+    font-family: Impact;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Anime-Img1{
+    width: 100%;
+    height: auto;
+   position: relative;
+   left: 0px;
+
+}
+
+.Manga-News{
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+
+.Manga-Img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.Manga-details{
+color: red;
+font-style: italic;
+}
+
+.Manga-Title{
+    color: red;
+    font-family: Impact;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.News-Title{
+    color:red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Anime-News-Details{
+    color: red;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Anime-Trailer{
+    color: red;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Latest-News{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 54px;
+    margin: auto;
+    padding: 5px;
+}
+
+.Anime-Announcement{ 
+    height: 400px;
+    width: 50%;
+    border: 5px solid red;
+  
+    
+}
