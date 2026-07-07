@@ -172,3 +172,8 @@ font-style: italic;
   
     
 }
+
+.tweet-link{
+    color: red;
+    font-style: Italic;
+}
