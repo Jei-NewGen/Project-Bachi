@@ -1,0 +1,19 @@
+
+body{
+    background: linear-gradient(black);
+
+}
+h1{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+p{
+    color: purple;
+}
+#img1{
+}
