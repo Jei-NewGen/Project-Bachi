@@ -18,4 +18,4 @@ switch (selection) {
         return "ROLL AGAIN";
 } }
 const character = charGenerator();
-console.log(character);
+console.log(character); 

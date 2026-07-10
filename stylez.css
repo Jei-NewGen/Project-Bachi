@@ -1,0 +1,187 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(black);
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.HeadTitle{
+position: absolute;
+top: 0px;
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.navbar{
+    border: 1px solid red;
+    position: sticky;
+    background-color: red;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: impact;
+}
+
+
+.banner{
+    position: absolute;
+    top: 190px;
+    width: 60%;
+    height: 200px;
+    font-weight: bold;
+  
+}
+
+.banner-img{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner-img:hover{
+    transform: scale(1.1) translateY(-5px);
+}
+
+.about{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: 25px;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+a:hover{
+    color: white;
+    
+}
+
+.news-details{
+    color: red;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;   
+    font-size: 23px;
+    border-bottom: 3px solid red;
+    
+}
+ 
+.Anime-Title{
+    color: red;
+    font-family: Impact;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: relative;
+    margin: auto;
+}
+
+.Anime-Img1{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   position: relative;
+   
+
+}
+
+.Manga-News{
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+
+.Manga-Img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.Manga-details{
+color: red;
+font-style: italic;
+}
+
+.Manga-Title{
+    color: red;
+    font-family: Impact;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.News-Title{
+    color:red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Anime-News-Details{
+    color: red;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+
+.Anime-Trailer{
+    color: red;
+    display: flex;
+    margin: auto;
+}
+
+.Latest-News{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 54px;
+    margin: auto;
+    padding: 30px;
+}
+
+.Anime-Announcement{ 
+    height: auto;
+    width: 100%;
+    border: 5px solid red;
+    padding: 30px;
+  
+    
+}
+
+.tweet-link{
+    color: red;
+    font-style: Italic;
+}
