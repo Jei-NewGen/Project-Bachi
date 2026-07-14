@@ -151,17 +151,20 @@ font-style: italic;
 
 .Anime-News-Details{
     color: red;
-    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: center;
+    margin: auto;
 
 }
 
 .Anime-Trailer{
     color: red;
     display: flex;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .Latest-News{
@@ -183,5 +186,27 @@ font-style: italic;
 
 .tweet-link{
     color: red;
-    font-style: Italic;
+    font-family: Impact;
+} 
+
+.Char-Design-Img{
+    width: 70%;
+    height: auto;
+    margin: auto;
+} 
+
+.Chihiro-Va{
+    border: 3px solid white;
+    margin: 20px;
+}
+
+.Kunishige-Va{
+    border: 3px solid white;
+    margin: 20px;
+}
+
+.Shiba-Va{
+    border: 3px solid white;
+    margin: 20px;
+
 }
