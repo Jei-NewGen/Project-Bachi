@@ -210,3 +210,38 @@ font-style: italic;
     margin: 20px;
 
 }
+
+.previews{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(2,2fr);
+}
+
+.Comm-Preview{
+    border: 1px solid red;
+}
+
+.Preview-Title{
+    color: red;
+    font-family: Impact;
+    display: flex;
+    align-items: center;
+    Justify-content: center;
+}
+
+.Preview-Text{
+    color: red;
+    font-family: Impact;
+}
+
+.Art-Preview{
+    border: 1px solid red;
+}
+
+.Gacha-Preview{
+    border: 1px solid red;
+}
+
+.Poll-Preview{
+    border: 1px solid red;
+}
