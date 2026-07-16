@@ -1,3 +1,4 @@
+/*change the px to % or vw as you need the layout to be fluid and responsive on mobile as well! Also don't forget to add the accessibility for those with disabilities*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -244,4 +245,12 @@ font-style: italic;
 
 .Poll-Preview{
     border: 1px solid red;
+}
+
+.Art-Frame{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
 }
