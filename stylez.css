@@ -176,7 +176,7 @@ font-style: italic;
     grid-template-columns: repeat(2, 2fr);
     gap: 54px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 
 @keyframes cool-effect {
@@ -227,12 +227,18 @@ font-style: italic;
 
 .previews{
     display: grid;
-    grid-template-columns: repeat(2,2fr);
-    grid-template-rows: repeat(2,2fr);
 }
 
 .Comm-Preview{
-    border: 1px solid red;
+    padding-top: 3rem;
+    padding-bottom:3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,3fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1rem;
 }
 
 .Preview-Title{
@@ -249,15 +255,26 @@ font-style: italic;
 }
 
 .Art-Preview{
-    border: 1px solid red;
+    border-top: 3px solid red;
+    padding-top: 3rem;
+    padding-bottom:3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .Gacha-Preview{
-    border: 1px solid red;
+    border-top: 3px solid red;
+    padding-top: 3rem;
+    padding-bottom:3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .Poll-Preview{
-    border: 1px solid red;
+    padding-top: 3rem;
+    padding-bottom:3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .Art-Frame{
@@ -289,4 +306,13 @@ font-style: italic;
 .Creator-Links{
     color: red;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.creator{
+border: 7px solid whitesmoke;
+border-radius: 1.3rem;
+text-align: center;}
+
+.creator:hover{
+    transform: translateY(-8px) scale(1.02);;
 }
