@@ -8,7 +8,6 @@
 <h1>WELCOME TO THE RANDOM CHARACTER SELECT GACHA PAGE</h1>
 <p> More characters shall be added as we update the site, but we have a baseline of 10 at this current moment!</p>
 
-    <!-- Link your external JS file right before the closing body tag -->
     <script src="script.js"></script>
     <div class="characters">
       <div id="img1" >

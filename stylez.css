@@ -122,7 +122,6 @@ a:hover{
 .Manga-News{
     border: 5px solid red;
     border-radius: 10px;
-    animation: cool-effect 4s ease-in-out infinite alternate;
 }
 
 
@@ -194,10 +193,9 @@ font-style: italic;
     height: auto;
     width: 100%;
     border: 5px solid red;
-    padding: 30px;
-    animation: cool-effect 2s ease-in-out infinite alternate;
-  
-    
+    padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
 }
 
 .tweet-link{
@@ -212,18 +210,15 @@ font-style: italic;
 } 
 
 .Chihiro-Va{
-    border: 3px solid white;
-    margin: 20px;
+    margin: 30px;
 }
 
 .Kunishige-Va{
-    border: 3px solid white;
-    margin: 20px;
+    margin: 30px;
 }
 
 .Shiba-Va{
-    border: 3px solid white;
-    margin: 20px;
+    margin: 30px;
 
 }
 
@@ -232,6 +227,7 @@ font-style: italic;
  grid-template-rows: repeat(4, auto);
  grid-template-columns: repeat(2, 1fr);
  gap: 2rem;
+ padding: 3rem;
 
 }
 
@@ -248,6 +244,14 @@ font-style: italic;
     border-radius: 1rem;
 }
 
+.Comm-Preview:hover{
+    animation: cool-effect 2s ease-in-out infinite alternate;
+    transform: translateY(-8px) scale(1.02);
+    transition: 
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
 .Preview-Title{
     color: red;
     font-family: Impact;
@@ -259,6 +263,7 @@ font-style: italic;
 .Preview-Text{
     color: red;
     font-family: Impact;
+    text-align: center;
 }
 
 .Art-Preview{
@@ -273,7 +278,7 @@ font-style: italic;
 }
 
 .Gacha-Preview{
-    border-top: 3px solid red;
+    border: 5px solid red;
     padding-top: 3rem;
     padding-bottom:3rem;
     margin-top: 2rem;
@@ -281,6 +286,7 @@ font-style: italic;
 }
 
 .Poll-Preview{
+    border: 5px solid red;
     padding-top: 3rem;
     padding-bottom:3rem;
     margin-top: 2rem;
@@ -288,16 +294,30 @@ font-style: italic;
 }
 
 .Art-Frame{
-    margin: 10px auto;
+    margin: auto;
     display: flex;
     justify-content: space-around;
-    gap:20px;
-    width: 40%;
+    gap: 20px;
+    width: 42%;
+    animation: smoothMove 6s infinite cubic-bezier(0.34, 1.56, 0.64, 1);
 
 }
 
+@keyframes smoothMove {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    
+  }
+  5%, 25% {
+    transform: translateY(-8px) scale(1.02);
+  }
+  30% {
+    transform: translateY(0) scale(1);
+    
+  }
+}
+
 .Art-Gal{
-  border: 1px solid red;
   display: flex;
   align-items: center;
   width: 50%;
@@ -320,8 +340,8 @@ font-style: italic;
 }
 
 .creator{
-border: 7px solid #DC143C;
-border-radius: 1.2rem;
+border: 5px solid #DC143C;
+border-radius: 1.1rem;
 text-align: center;
 
 }
