@@ -363,3 +363,16 @@ text-align: center;
     border: 7px solid white;
     border-radius: 1.2rem;
 }
+
+.poll-preview-img{
+    width: 30rem;
+    height: 25rem;
+    gap: 15rem;
+    margin: auto;
+}
+
+.foot-container{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 20rem;
+}
