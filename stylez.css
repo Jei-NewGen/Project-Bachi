@@ -67,8 +67,9 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: italic;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
+    text-align: center;
 
 }
 
@@ -96,6 +97,7 @@ a:hover{
     padding-bottom: 50px;   
     font-size: 23px;
     border-bottom: 3px solid red;
+    
     
 }
  
@@ -179,7 +181,9 @@ font-style: italic;
     margin: auto;
     padding: 2rem;
     border-bottom: solid red 3px;
+   
 }
+
 
 @keyframes cool-effect {
   0% {
@@ -197,6 +201,7 @@ font-style: italic;
     padding: 10px;
     display: grid;
     grid-template-rows: repeat(1,1fr);
+    border-radius: 10px;
 }
 
 .tweet-link{
@@ -384,4 +389,22 @@ text-align: center;
 .social-heading{
     color: white;
     font-family:Impact;
+}
+
+.Footer-Links{
+color: white;
+font-family: Impact;
+}
+
+.Footer-Links:hover{
+    color: red;
+}
+
+.Logos{
+    height: 3rem;
+    width:  3rem;
+}
+
+.Dont-Sue-me{
+    color: red; 
 }
