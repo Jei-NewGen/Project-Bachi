@@ -408,3 +408,8 @@ font-family: Impact;
 .Dont-Sue-me{
     color: red; 
 }
+
+
+@media (max-width: 768px) {
+  
+}
