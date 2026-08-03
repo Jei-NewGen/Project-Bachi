@@ -411,5 +411,34 @@ font-family: Impact;
 
 
 @media (max-width: 768px) {
+  .navbar{
+    font-size: 0.8rem;
+  }
+
+  .about{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .news-details{
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .Latest-News{
+    width: 100%;
+    max-width: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;     
+  }
+
+
+  
   
 }

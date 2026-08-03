@@ -1,30 +1,41 @@
-.navbar{
-    border: 1px solid red;
-    position: sticky;
-    background-color: red;
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
-    font-family: impact;
+*{
+    box-sizing: border-box;
+     margin: 0;
+     padding: 0;
 }
 
 body{
     background: linear-gradient(#010203);
     width: 100%;
     height: 100%;
+ 
 
 }
 
-a{
+.navbar{
+    border: 1px solid red;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: red;
+    height: 1.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.7rem;
+    font-family: impact;
+}
+
+
+.navbar a{
     text-decoration: none;
     color: black;
     font-style: oblique;
     display: flex;
     justify-content: space-evenly;
-    padding: 5px;
     display: inline;
+    text-align: center;
+    white-space: nowrap
 }
 
 a:hover{
