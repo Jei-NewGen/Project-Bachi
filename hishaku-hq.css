@@ -96,3 +96,59 @@ text-decoration: none;
     display: flex;
     margin: auto;
 }
+
+.Bachi-Comms-Links{
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.8rem;
+    margin-top:0.5rem;
+}
+
+.Bachi-Comms-Links a{
+text-decoration: none;
+font-family:  Arial, Helvetica, sans-serif;
+color: white;
+animation: cool-effect 6s ease-in-out infinite alternate;
+}
+
+.Discords{
+    border: 1px solid red;
+    text-align: center;
+    
+}
+
+.Reddit{
+    border: 1px solid red;
+    text-align: center;
+}
+
+.Wiki{
+    border: 1px solid red;
+    text-align: center;
+}
+
+.X-Comm{
+    border: 1px solid red;
+    text-align: center;
+}
+
+.Twitter-Img,.Discord-Img,.Reddit-Img,.Wiki-Img{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+
+}
+
+@keyframes cool-effect {
+  0% {
+    color: white;
+  }
+  50%{
+    color: crimson ;
+  }
+  100% {
+    color: red;
+  }
+}
