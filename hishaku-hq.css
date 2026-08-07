@@ -2,12 +2,14 @@
     box-sizing: border-box;
      margin: 0;
      padding: 0;
+    
 }
 
 body{
     background: linear-gradient(#010203);
     width: 100%;
-    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
  
 
 }
@@ -47,6 +49,7 @@ a:hover{
 footer{
     position: sticky;
     bottom: 0;
+    
 }
 
 .foot-container{
@@ -98,7 +101,6 @@ text-decoration: none;
 }
 
 .Bachi-Comms-Links{
-    border: 1px solid red;
     display: grid;
     grid-template-rows: repeat(2,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -110,45 +112,93 @@ text-decoration: none;
 text-decoration: none;
 font-family:  Arial, Helvetica, sans-serif;
 color: white;
-animation: cool-effect 6s ease-in-out infinite alternate;
+}
+
+.Bachi-Comms-Links a:active{
+    color: white;
 }
 
 .Discords{
-    border: 1px solid red;
+    border: 4px solid red;
     text-align: center;
-    
+    border-radius: 0.9rem;
+    animation: cool-effect 6s ease-in-out infinite alternate;
 }
 
 .Reddit{
-    border: 1px solid red;
+    border: 4px solid crimson;
     text-align: center;
-}
+    border-radius: 0.9rem;
+    animation: cool-effect 6s ease-in-out infinite alternate;
+}  
 
 .Wiki{
-    border: 1px solid red;
+    border: 4px solid red;
     text-align: center;
+    border-radius: 0.9rem;
+    animation: cool-effect 6s ease-in-out infinite alternate;
 }
 
 .X-Comm{
-    border: 1px solid red;
+    border: 4px solid crimson;
     text-align: center;
+    border-radius: 0.9rem;
+    animation: cool-effect 6s ease-in-out infinite alternate;
 }
 
 .Twitter-Img,.Discord-Img,.Reddit-Img,.Wiki-Img{
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-
+    animation: smoothMove 6s infinite cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+.X-Comm a,.Discords a{
+    display: block;
+}
+
+.Creator-Hub p{
+    color: red;
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.Creator-Hub h2{
+    color: red;
+    font-family: impact;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.6rem;
+    border-bottom: 1px solid red;
+}
+
+
+
+
 
 @keyframes cool-effect {
   0% {
-    color: white;
+    border-color: red;
   }
-  50%{
-    color: crimson ;
-  }
+ 
   100% {
-    color: red;
+    border-color: crimson;
+  }
+}
+
+@keyframes smoothMove {
+  0%, 100% {
+    transform: translateY(0) scale(0.8);
+    
+  }
+  5%, 25% {
+    transform: translateY(-8px) scale(1.02);
+  }
+  30% {
+    transform: translateY(0) scale(0.8);
+    
   }
 }
