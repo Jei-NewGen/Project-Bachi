@@ -178,6 +178,13 @@ color: white;
 .Creator-Grid{
     display: grid;
     grid-template-columns: (1,1fr);
+    
+}
+
+.Creator-Grid a{
+    text-decoration: none;
+    color: crimson;
+    gap: 10rem;
 }
 
 .Creator-1{
@@ -191,6 +198,7 @@ color: white;
 .Creator-1 img{
     height: auto;
     width: 4rem;
+    
 }
 
 .RowRowNoa{
@@ -200,7 +208,7 @@ flex-direction: row;
 
 .Creator-2{
     display: flex;
-    left: 0;
+    right: 0;
     flex-direction: column;
 }
 
@@ -211,7 +219,32 @@ flex-direction: row;
 }
 
 
+.Pop-Up-Quote{
+    border: 4px solid gold;
+    text-align: center;
+    font-family: Impact;
+    display: flex;
+    width: 100%;
+    height: 9rem;
+    background-color: white;
+    align-items: center;
+    display: none;
+    animation: unHide 5s ease-in-out forwards;
+}
 
+#quote-random{
+    color: red;
+    position: relative;
+    top: 1rem;
+    font-size: 1.5rem;
+}
+
+.Pop-Up-Quote img{
+    display: block;
+    margin: auto;
+    width: 6rem;
+    height: 10rem;
+}
 
 @keyframes cool-effect {
   0% {
@@ -234,5 +267,34 @@ flex-direction: row;
   30% {
     transform: translateY(0) scale(0.8);
     
+  }
+}
+
+@keyframes unHide{
+    0%{
+      opacity: 0;
+      scale:(0.5);  
+    }
+
+    90%{
+        opacity: 1;
+        scale:(1.2);
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes quote-effect {
+  0% {
+    border-color: yellowgreen;
+  }
+  50%{
+    border-color: yellow
+  }
+ 
+  100% {
+    border-color: gold;
   }
 }
