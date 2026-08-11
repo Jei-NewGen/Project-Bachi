@@ -5,13 +5,17 @@
     
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+
 body{
     background: linear-gradient(#010203);
     width: 100%;
     height: 100%;
-    
- 
-
+    line-height: 1.5;
 }
 
 .navbar{
@@ -24,7 +28,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    font-size: 0.75rem;
+    font-size: 0.67rem;
     font-family: impact;
     z-index: 1;
 }
@@ -48,8 +52,9 @@ a:hover{
 }
 
 footer{
-    position: static;
+    position: relative;
     bottom: 0;
+    height: 100%;
     
 }
 
@@ -106,9 +111,10 @@ text-decoration: none;
     color: red;
     font-family: impact;
     position: absolute;
-    top: 35rem;
-    left: 6.5rem;
+    top: 29.5rem;
+    left: 5.2rem;
     border-bottom: 4px solid red;
+    text-align: center;
 }
 
 .Bachi-Comms-Links{
@@ -118,7 +124,7 @@ text-decoration: none;
     gap: 0.8rem;
     margin-top:0.5rem;
     position: absolute;
-    top:38rem;
+    top:36rem;
     margin: auto;
     
 }
@@ -227,6 +233,10 @@ color: white;
     
 }
 
+.Creator-1 img:active{
+    border: 2px solid red;
+}
+
 .RowRowNoa{
 flex-direction: row;
 
@@ -275,6 +285,42 @@ flex-direction: row;
     width: 6rem;
     height: 10rem;
 }
+li{
+    color: red;
+    display: flex;
+    justify-content: space-evenly;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Author-Comments{
+    color: gold;
+    font-style: oblique;
+}
+
+h3{
+    color: red;
+    font-family: impact;
+}
+
+.Hokazono-Sensei{
+    margin: auto;
+    text-align: center;
+}
+
+.Hokazono-Sensei h2{
+    border: none;
+}
+
+.Author-Speaks{
+margin-top: 1rem;
+padding-top: 1rem;
+border: 1px solid gold;
+background-color: white;
+}
+
+
+
+
 
 @keyframes cool-effect {
   0% {
