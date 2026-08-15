@@ -5,6 +5,10 @@
     
 }
 
+.desktop-only {
+  display: none;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -294,12 +298,12 @@ li{
 }
 
 .Author-Comments{
-    color: gold;
+    color: #9966CC;
     font-style: oblique;
 }
 
 h3{
-    color: red;
+    color: #9966CC;
     font-family: impact;
 }
 
@@ -316,12 +320,8 @@ h3{
 margin-top: 1rem;
 padding-top: 1rem;
 border: 1px solid gold;
-background-color: white;
+background-color: whitesmoke;
 }
-
-
-
-
 
 
 
@@ -376,4 +376,39 @@ background-color: white;
   100% {
     color: gold;
   }
+}
+
+
+@media (min-width: 768px) {
+    .navbar{
+        height: 2.6rem;
+        font-size: 1.2rem;
+    }
+    
+    .Page-Title{
+        font-size: 1.1rem;
+    }
+    
+    .foot-container{
+      height: 15rem;
+    }
+    footer{
+        height: 34rem;
+    }
+}
+
+@media (min-width: 1024px){
+ .desktop-only{
+    display: block;
+ }
+
+ .Pop-Up-Quote{
+    height: 60rem;
+ }
+ 
+ .Bachi-Comms-Links{
+    padding-bottom: 40rem;
+ }
+
+
 }
