@@ -94,4 +94,8 @@ a:hover{
     bottom: 3rem;
 }
 
-
+.placeholder{
+    border: 1px solid red;
+    width: 15rem;
+    height: 10rem;
+}
