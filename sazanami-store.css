@@ -94,8 +94,23 @@ a:hover{
     bottom: 3rem;
 }
 
-.placeholder{
-    border: 1px solid red;
-    width: 15rem;
-    height: 10rem;
+.placeholder-1{
+    width: 11rem;
+    height: 17rem;
+    
 }
+
+#Change-1{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+ }
+
+ #Change-1 p{
+    color: black;
+ }
+
+
+
+ 

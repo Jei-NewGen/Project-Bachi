@@ -14,7 +14,7 @@ const volumes = ["url('assets/kgb volume 1 cover.webp')",
 const volumeChange = document.getElementById("Change-1");
 function volumeReplace(){
 const randomVolume = Math.floor(Math.random() * volumes.length);
-volumeChange.src = volumes[randomVolume];
+volumeChange.style.backgroundImage = volumes[randomVolume];
 }
 volumeReplace();
 setInterval(volumeReplace, 7000);
