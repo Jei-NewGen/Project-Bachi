@@ -111,6 +111,27 @@ a:hover{
     color: black;
  }
 
+ .Art-Title{
+    color: red;
+    font-family: impact;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+ }
+
+ .Art-Introduction{
+    color: red;
+    text-align: center;
+    font-family:  Arial, Helvetica, sans-seri;
+    margin-bottom: 1rem;
+ }
+
+ .Bachi-Memes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+ }
+
 
 
  

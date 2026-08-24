@@ -8,7 +8,8 @@ const volumes = ["url('assets/kgb volume 1 cover.webp')",
   "url('assets/kgb vol 8.webp')",
   "url('assets/kgb vol 9.webp')",
   "url('assets/kgb vol 10.webp')",
-  "url('assets/kgb vol 11.webp')"
+  "url('assets/kgb vol 11.webp')",
+  "url('assets/kgb vol 12.webp')"
 ]
 
 const volumeChange = document.getElementById("Change-1");
