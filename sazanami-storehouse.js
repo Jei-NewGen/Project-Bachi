@@ -19,3 +19,15 @@ volumeChange.style.backgroundImage = volumes[randomVolume];
 }
 volumeReplace();
 setInterval(volumeReplace, 7000);
+
+
+const memeChange = document.getElementById("Change-2");
+const memes = [
+
+];
+function memeReplace(){
+  const randomMeme = Math.floor(Math.random()* memes.length);
+  memeChange.style.backgroundImage = memes[randomMeme];
+}
+memeReplace();
+setInterval(memeReplace, 7000);
