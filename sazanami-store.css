@@ -132,6 +132,58 @@ a:hover{
     grid-template-rows: repeat(6,1fr);
  }
 
+.Meme-1{
+    width:70%;
+    height: 8rem;
+}
 
+.Meme-2{
+    width: 70%;
+    height: 7rem;
 
- 
+}
+
+.Meme-3{
+    width: 70%;
+    height: 7rem;
+}
+
+.Meme-4{
+    width: 50%;
+    height: 5rem;
+}
+
+.Meme-5{
+    width: 50%;
+    height: 8rem;
+}
+
+.Meme-6{
+    width: 70%;
+    height: 10rem;
+}
+
+.Meme-7{
+    width: 60%;
+    height: 10rem;
+}
+
+.Meme-8{
+    width: 60%;
+    height: 10rem;
+}
+
+.Meme-9{
+    width: 60%;
+    height: 10rem;
+}
+
+.Meme-10{
+    width: 60%;
+    height: 10rem;
+}
+
+.Meme-11{
+    width: 60%;
+    height: 10rem;
+}
