@@ -172,93 +172,111 @@ a:hover{
 
 .Meme-4{
     width: 100%;
-    height: 5rem;
+    height: 7rem;
 }
 
 .Meme-5{
-    width: 50%;
+    width: 100%;
     height: 8rem;
 }
 
 .Meme-6{
-    width: 70%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-7{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-8{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-9{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-10{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-11{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-12{
-    width: 70%;
+    width: 100%;
     height: 14rem;
 }
 
 .Meme-13{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-14{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-15{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-16{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-17{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-18{
-    width: 60%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-19{
-    width: 70%;
+    width: 100%;
     height: 17rem;
 }
 
 .Meme-20{
-    width: 90%;
+    width: 100%;
     height: 10rem;
 }
 
 .Meme-Imgs{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(10,1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(7,1fr);
+    gap: 1rem;
+    
+}
 
+#Change-3{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    width: 70%;
+    height: 11rem;
+}
+
+#Change-3 p{
+    color: black;
+}
+
+.Panel-1{
+    width: 100%;
+    height: 9rem;
 }
