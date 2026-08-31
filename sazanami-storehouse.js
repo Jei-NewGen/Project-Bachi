@@ -51,28 +51,31 @@ memeReplace();
 setInterval(memeReplace, 7000);
 
 const panelChange = document.getElementById("Change-3");
-const panels = ["url('assets/panel 1.jpg')",
-                "url('assets/panel 2.jpg')",
-                "url('assets/panel 3.webp')",
-                "url('assets/panel 4.jpg')",
-                "url('assets/panel 5.webp')",
-                "url('assets/panel 6.jpeg')",
-                "url('assets/panel 7.webp')",
-                "url('assets/panel 8.jpg')",
-                "url('assets/panel 9.jpg')",
-                "url('assets/panel 10.jpg')",
-                "url('assets/panel 11.jpg')",
-                "url('assets/panel 12.webp')",
-                "url('assets/panel 13.jpg')",
-                "url('assets/panel 14.jpeg')",
-                "url('assets/panel 15.webp')",
-                "url('assets/panel 16.webp')",
-                "url('assets/panel 17.webp')",
-                "url('assets/panel 18.jpg')",
-                "url('assets/panel 19.jpg')",
-                "url('assets/panel 20.jpg')"
+const panels = [
+  "url('assets/panel 1.jpg')",
+  "url('assets/panel 2.jpg')",
+  "url('assets/panel 3.webp')",
+  "url('assets/panel 4.jpg')",
+  "url('assets/panel 5.webp')",
+  "url('assets/panel 6.jpeg')",
+  "url('assets/panel 7.webp')",
+  "url('assets/panel 8.jpg')",
+  "url('assets/panel 9.jpg')",
+  "url('assets/panel 10.jpg')",
+  "url('assets/panel 11.jpg')",
+  "url('assets/panel 12.webp')",
+  "url('assets/panel 13.jpg')",
+  "url('assets/panel 14.jpeg')",
+  "url('assets/panel 15.webp')",
+  "url('assets/panel 16.webp')",
+  "url('assets/panel 17.webp')",
+  "url('assets/panel 18.jpg')",
+  "url('assets/panel 19.jpg')",
+  "url('assets/panel 20.jpg')"
 ];
 function panelReplace(){
   const randomPanels = Math.floor(Math.random() * panels.length);
   panelChange.style.backgroundImage = panels[randomPanels]
 }
+panelReplace();
+setInterval(panelReplace, 7000);
