@@ -395,3 +395,20 @@ a:hover{
 
 
 }
+
+.Art-Submission{
+    color: red;
+    font-family: impact;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.Button-Design{
+    width: 8rem;
+    height: 11rem;
+    border: 1px solid red;
+    border-radius: 4rem;
+
+}
