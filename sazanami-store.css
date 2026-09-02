@@ -405,10 +405,24 @@ a:hover{
     margin-top: 4rem;
 }
 
-.Button-Design{
+.Button-Img{
     width: 8rem;
     height: 11rem;
     border: 1px solid red;
-    border-radius: 4rem;
+    border-radius: 5rem;
+}
 
+.Button-Design{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.Button-Info{
+    color: red;
+    text-align: center;
+    font-family: impact;
 }

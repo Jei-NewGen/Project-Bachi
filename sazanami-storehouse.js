@@ -79,3 +79,12 @@ function panelReplace(){
 }
 panelReplace();
 setInterval(panelReplace, 7000);
+
+const submissionButton = document.getElementById("submission");
+
+function customArtSubmissions(){
+console.log("Art submission processing...");
+
+}
+
+submissionButton.addEventListener("click", customArtSubmissions);
