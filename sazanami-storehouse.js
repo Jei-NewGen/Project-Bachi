@@ -80,11 +80,25 @@ function panelReplace(){
 panelReplace();
 setInterval(panelReplace, 7000);
 
-const submissionButton = document.getElementById("submission");
+const artSubmission = document.getElementById("artInput");
 
-function customArtSubmissions(){
-console.log("Art submission processing...");
+function handleArtFile(event){
+  const artFile = event.target.files; // when user selects a file, a massive load of data is sent to the event variable, target is like a messenger that points to the element the user selected which is <input type="file">, .files is a hidden vault that the browser creates automatically.
 
-}
+//this next line is a if statement that checks if user actually used it, thought id type what it does here in my own words so i can learn it better when revisiting all the code.
+  if(artFile.length === 0){
+    console.log("No art file selected.")
+    return;
+  }
+};
 
-submissionButton.addEventListener("click", customArtSubmissions);
+const chosenArtFile = artFile[0]; // this line stores the first file selected by the user.
+
+//the next lines show extraction information if extraction is successful.
+console.log("Art file successfully extracted.");
+console.log("File name:",chosenArtFile.name);
+console.log("File size:", chosenArtFile.size); //shows in bytes, 1kb = 1024 bytes, 1mb = 1024kb
+console.log("File type:", chosenArtfile.type);
+
+artSubmission.addEventListener('change', handleArtFile);
+// all of this successfully extracts and shows the file but its not permanent and will go away when user resets tab.
