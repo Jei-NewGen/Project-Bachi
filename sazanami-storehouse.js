@@ -102,3 +102,8 @@ console.log("File type:", chosenArtfile.type);
 
 artSubmission.addEventListener('change', handleArtFile);
 // all of this successfully extracts and shows the file but its not permanent and will go away when user resets tab.
+
+const mail = new FormData(); //creates an empty form data object that can be used to send data to a server.
+mail.append("artwork", chosenArtFile); // puts the art inside and labels it "artwork".
+// this is like packaging into a box and labeling it.
+
