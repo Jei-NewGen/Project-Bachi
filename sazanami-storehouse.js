@@ -105,5 +105,12 @@ artSubmission.addEventListener('change', handleArtFile);
 
 const mail = new FormData(); //creates an empty form data object that can be used to send data to a server.
 mail.append("artwork", chosenArtFile); // puts the art inside and labels it "artwork".
-// this is like packaging into a box and labeling it.
+// this is like putting packaging into a box and labeling it.
+
+//once everything is packaged, we can send it to a server using fetch(currently don't have server so uh got to learn how to get one or is it something i have to buy lol)
+fetch("https://example.com/submit-art",{
+method : "POST", // tells server im giving it data
+body: mail // attaches the mail containing the art 
+})
+
 
