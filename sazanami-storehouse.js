@@ -90,7 +90,7 @@ function handleArtFile(event){
     console.log("No art file selected.")
     return;
   }
-};
+
 
 const chosenArtFile = artFile[0]; // this line stores the first file selected by the user.
 
@@ -98,19 +98,32 @@ const chosenArtFile = artFile[0]; // this line stores the first file selected by
 console.log("Art file successfully extracted.");
 console.log("File name:",chosenArtFile.name);
 console.log("File size:", chosenArtFile.size); //shows in bytes, 1kb = 1024 bytes, 1mb = 1024kb
-console.log("File type:", chosenArtfile.type);
-
-artSubmission.addEventListener('change', handleArtFile);
-// all of this successfully extracts and shows the file but its not permanent and will go away when user resets tab.
+console.log("File type:", chosenArtFile.type);
 
 const mail = new FormData(); //creates an empty form data object that can be used to send data to a server.
 mail.append("artwork", chosenArtFile); // puts the art inside and labels it "artwork".
 // this is like putting packaging into a box and labeling it.
 
 //once everything is packaged, we can send it to a server using fetch(currently don't have server so uh got to learn how to get one or is it something i have to buy lol)
-fetch("https://example.com/submit-art",{
+fetch("http://localhost:3000/upload",{
 method : "POST", // tells server im giving it data
 body: mail // attaches the mail containing the art 
 })
+
+.then(function(response){
+  if(response.ok){
+    alert("Art successfully sent.");
+  }
+  else{
+    alert("Error occurred...TRY AGAIN.");
+  }
+})
+ 
+.catch(function(error) {
+        console.error("Upload Failed:", error);
+    });
+  }
+
+artSubmission.addEventListener('change', handleArtFile);
 
 
