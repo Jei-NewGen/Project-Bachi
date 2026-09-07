@@ -126,4 +126,37 @@ body: mail // attaches the mail containing the art
 
 artSubmission.addEventListener('change', handleArtFile);
 
+//making it so the art sent is displayed in a gallery at random, this is the next stage of the process.
 
+const artDisplay = document.getElementById("artDisplay"); 
+
+//function that shuffles list randomly
+function shuffleArt(artArray){  
+  return artArray.sort(function() { //.sort is a built in tool, normally it sorts in order and decides what comes first based on certain factors. Due to function it will not sort in order since we are giving it a random number to decide.
+    return 0.5 - Math.random(); // when subtracting a random from 0.5, it can be positive, negative or 0. If negative, it is left in order, if positive it is moved swaps positions, This is how it shuffles randomly.
+  });
+}
+// after researching(scrolling forums/websites lol) i learned this method isn't perfect and can be better, but for this gallery it will work since gallerys are small. Although if the site gets very big i would have to redo this then? 
+
+//this function will pull art from backend server
+function loadRandomArt(){
+  fetch("http://Localhost:3000/api/artwork") // this is the endpoint thats used to get art, endpoints are dedicated urls used for a specific purpose, im using it to get art from the backend.
+  .then(function(response) {
+    return response.json();  // basically servers can't actually send arrays, its initially viewed as a giant string, but this line makes it readable.(Simplified it)
+  })
+  .then(function(artArray){
+    const randomArt = shuffleArt(artArray); // this uses the earlier function to shuffle the art randomly, its like the puzzle pieces are coming together.
+  })
+
+  artDisplay.innerHTML = ""; // this clears the gallery before adding any new files
+
+  randomArt.forEach(function(art){
+    const artImage = document.createElement("img"); // this creates a new img element in RAM, but since it isn't visual yet its called a floating element.
+  })
+
+  artImage.src = "http://localhost:3000/uploads/" + fileName;
+  artImage.alt = "Fan-Art";
+  artImage.className = "Fan-Art-Gallery";
+  
+  artDisplay.appendChild(artImage); 
+}
