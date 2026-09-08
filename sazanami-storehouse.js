@@ -105,7 +105,7 @@ mail.append("artwork", chosenArtFile); // puts the art inside and labels it "art
 // this is like putting packaging into a box and labeling it.
 
 //once everything is packaged, we can send it to a server using fetch(currently don't have server so uh got to learn how to get one or is it something i have to buy lol)
-fetch("http://localhost:3000/upload",{
+fetch("http://localhost:5000/upload",{
 method : "POST", // tells server im giving it data
 body: mail // attaches the mail containing the art 
 })
@@ -140,7 +140,7 @@ function shuffleArt(artArray){
 
 //this function will pull art from backend server
 function loadRandomArt(){
-  fetch("http://Localhost:3000/api/artwork") // this is the endpoint thats used to get art, endpoints are dedicated urls used for a specific purpose, im using it to get art from the backend.
+  fetch("http://Localhost:5000/api/artwork") // this is the endpoint thats used to get art, endpoints are dedicated urls used for a specific purpose, im using it to get art from the backend.
   .then(function(response) {
     return response.json();  // basically servers can't actually send arrays, its initially viewed as a giant string, but this line makes it readable.(Simplified it)
   })
@@ -152,11 +152,15 @@ function loadRandomArt(){
 
   randomArt.forEach(function(art){
     const artImage = document.createElement("img"); // this creates a new img element in RAM, but since it isn't visual yet its called a floating element.
-  })
-
-  artImage.src = "http://localhost:3000/uploads/" + fileName;
+  
+  artImage.src = "http://localhost:5000/uploads/" + fileName;
   artImage.alt = "Fan-Art";
   artImage.className = "Fan-Art-Gallery";
   
   artDisplay.appendChild(artImage); 
+})
+.catch(function(error){
+  console.error("Loading art error...", error);
+});
 }
+window.addEventListener("DOMContentLoaded", loadRandomArt); // this triggers the function to load art when page is fully loaded 

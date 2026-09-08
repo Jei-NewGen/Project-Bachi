@@ -426,3 +426,12 @@ a:hover{
     text-align: center;
     font-family: impact;
 }
+
+.ArtDisplayGal{
+width: 32rem;
+height: 32rem;
+margin: auto;
+z-index: 5;
+border: 1px solid red;
+object-fit: cover;
+}
