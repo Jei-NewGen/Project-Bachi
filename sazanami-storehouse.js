@@ -130,13 +130,6 @@ artSubmission.addEventListener('change', handleArtFile);
 
 const artDisplay = document.getElementById("artDisplay"); 
 
-//function that shuffles list randomly
-function shuffleArt(artArray){  
-  return artArray.sort(function() { //.sort is a built in tool, normally it sorts in order and decides what comes first based on certain factors. Due to function it will not sort in order since we are giving it a random number to decide.
-    return 0.5 - Math.random(); // when subtracting a random from 0.5, it can be positive, negative or 0. If negative, it is left in order, if positive it is moved swaps positions, This is how it shuffles randomly.
-  });
-}
-// after researching(scrolling forums/websites lol) i learned this method isn't perfect and can be better, but for this gallery it will work since gallerys are small. Although if the site gets very big i would have to redo this then? 
 
 //this function will pull art from backend server
 function loadRandomArt(){
@@ -145,22 +138,33 @@ function loadRandomArt(){
     return response.json();  // basically servers can't actually send arrays, its initially viewed as a giant string, but this line makes it readable.(Simplified it)
   })
   .then(function(artArray){
-    const artRandom = shuffleArt(artArray); // this uses the earlier function to shuffle the art randomly, its like the puzzle pieces are coming together.
+    if(artArray.length === 0){
+      artDisplay.innerHTML = "<p>NO ARTWORK!</p>";
+      return;
+    }
   
+   const randomPick = Math.floor(Math.random() * artArray.length);
+
+   const soloRandom = artArray[randomPick];
+
   artDisplay.innerHTML = ""; // this clears the gallery before adding any new files
 
-  artRandom.forEach(function(art){
+  
     const artImage = document.createElement("img"); // this creates a new img element in RAM, but since it isn't visual yet its called a floating element.
   
-  artImage.src = "http://localhost:5000/uploads/" + art;
+  artImage.src = "http://localhost:5000/uploads/" + soloRandom;
   artImage.alt = "Fan-Art";
   artImage.className = "Fan-Art-Gallery";
   
   artDisplay.appendChild(artImage); 
-});
+
 })
 .catch(function(error){
   console.error("Loading art error...", error);
 });
 }
 window.addEventListener("DOMContentLoaded", loadRandomArt); // this triggers the function to load art when page is fully loaded 
+
+// this allows users to manually switch the art that are currently seeing that they have uploaded
+const nextButton = document.getElementById("nextArt");
+nextButton.addEventListener('click', loadRandomArt);
