@@ -140,24 +140,24 @@ function shuffleArt(artArray){
 
 //this function will pull art from backend server
 function loadRandomArt(){
-  fetch("http://Localhost:5000/api/artwork") // this is the endpoint thats used to get art, endpoints are dedicated urls used for a specific purpose, im using it to get art from the backend.
+  fetch("http://localhost:5000/api/artwork") // this is the endpoint thats used to get art, endpoints are dedicated urls used for a specific purpose, im using it to get art from the backend.
   .then(function(response) {
     return response.json();  // basically servers can't actually send arrays, its initially viewed as a giant string, but this line makes it readable.(Simplified it)
   })
   .then(function(artArray){
-    const randomArt = shuffleArt(artArray); // this uses the earlier function to shuffle the art randomly, its like the puzzle pieces are coming together.
-  })
-
+    const artRandom = shuffleArt(artArray); // this uses the earlier function to shuffle the art randomly, its like the puzzle pieces are coming together.
+  
   artDisplay.innerHTML = ""; // this clears the gallery before adding any new files
 
-  randomArt.forEach(function(art){
+  artRandom.forEach(function(art){
     const artImage = document.createElement("img"); // this creates a new img element in RAM, but since it isn't visual yet its called a floating element.
   
-  artImage.src = "http://localhost:5000/uploads/" + fileName;
+  artImage.src = "http://localhost:5000/uploads/" + art;
   artImage.alt = "Fan-Art";
   artImage.className = "Fan-Art-Gallery";
   
   artDisplay.appendChild(artImage); 
+});
 })
 .catch(function(error){
   console.error("Loading art error...", error);

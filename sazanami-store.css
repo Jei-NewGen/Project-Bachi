@@ -428,10 +428,10 @@ a:hover{
 }
 
 .ArtDisplayGal{
-width: 32rem;
-height: 32rem;
+width: 100%;
+height: auto;
 margin: auto;
-z-index: 5;
 border: 1px solid red;
 object-fit: cover;
+overflow: hidden;
 }
