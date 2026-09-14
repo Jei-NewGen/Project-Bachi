@@ -7,42 +7,96 @@
 
 body{
     background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .navbar{
     border: 1px solid red;
     position: sticky;
+    top: 0;
     background-color: red;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-family: impact;
 }
 
 .navbar a{
     padding-right: 1rem;
-}
-
-body{
-    background: linear-gradient(#010203);
-    width: 100%;
-    height: 100%;
-
-}
-
-a{
     text-decoration: none;
     color: black;
     font-style: oblique;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5px;
-    display: inline;
+    text-align: center;
+    white-space: nowrap;
+   
 }
 
-a:hover{
+.desktop-only {
+  display: none;
+}
+
+html, body {
+  min-height: 100vh;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  padding-bottom: 6rem;
+}
+
+.Kasen{
+    width: 100%;
+    height: 10rem;
+}
+
+.Kamunabi-leaders{
+    width: 100%;
+    height: 10rem;
+}
+
+.Intro-H1{
+    color: red;
+    font-family: impact;
+    font-size: 1.3rem;
+}
+
+.Intro-P{
+    color: red;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.Intro-H1,.Intro-P{
+    text-align: center;
+}
+
+.Chapter-Relase-Countdown{
+    text-align: center;
+    width: 100%;
+}
+
+.Countdown-Heading{
+    color: red;
+    font-family: impact;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Time{
+    border: 1px solid red;
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number{
     color: white;
-    transform: scale(1.3);
-    
+    font-family: impact;
+    line-height: 1;
+    font-size: 2.3rem;
 }
