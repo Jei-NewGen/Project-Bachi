@@ -78,25 +78,31 @@ html, body {
 .Countdown-Heading{
     color: red;
     font-family: impact;
+    text-align: center;
 }
 
 .clock{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-right: 2rem;
 }
 
 .Time{
-    border: 1px solid red;
     padding: 0.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 0.5rem;
 }
 
 .number{
     color: white;
     font-family: impact;
     line-height: 1;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+}
+
+.sec{
+    margin-right: 1rem;
 }
