@@ -121,6 +121,36 @@ html, body {
     animation: smoothMove 6s infinite cubic-bezier(0.34, 1.56, 0.64, 1); 
 }
 
+.C-Files{
+    color: var(--color-2);
+}
+
+.file-layout{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+.Card-Layout{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(5,1fr);
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.Brief-Summary{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
 /* messed around with this and accidentally made something special im giggling at this */
 @keyframes smoothMove {
   0%, 100% {
