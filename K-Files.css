@@ -126,9 +126,7 @@ html, body {
 }
 
 .file-layout{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
+padding-bottom: 3rem;
 }
 
 .Card-Layout{
@@ -137,10 +135,102 @@ html, body {
     grid-template-rows: repeat(5,1fr);
     border: 3px solid red;
     border-radius: 10px;
+    text-align: center;
+    height: 35rem;
+     
 }
 
 .Brief-Summary{
     color: red;
+     
+}
+
+.Character-Expo{
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+}
+
+.Additional-Text{
+    color: red;
+    font-style: oblique;
+}
+
+.Appearances{
+    color: red;
+    font-style: oblique;
+}
+
+.Card-Top{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-2{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-3{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-4{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-5{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-6{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-7{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-8{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-9{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-10{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-11{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.Card-Top-12{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
 }
 
 
@@ -165,3 +255,5 @@ html, body {
     
   }
 }
+
+
