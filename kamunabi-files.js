@@ -37,3 +37,27 @@ document.getElementById("passing").innerHTML = "<div class='Countdown-Heading'  
 // replaces the boxes with a message notifying the chapter has released!  
 }
 },1000);
+
+
+
+
+
+//making a reusable function that allows image of card when pressed to chain to a secondary one, thought it would be a cool feature to add.
+
+function screenPressed(photoId,activeSrc,normal){
+    const pressedImg = document.getElementById(photoId);
+
+    function activeImg(){
+        pressedImg.src = activeSrc;
+    }
+
+    function backToNormal(){
+        pressedImg.src = normal;
+    }
+
+    pressedImg.addEventListener("touchstart", activeImg);
+    pressedImg.addEventListener("touchend", backToNormal);
+    pressedImg.addEventListener("touchcancel", backToNormal);
+}
+
+screenPressed("Card-Img-1","assets/Chihiro-Card-2.jpg", "assets/chihiro-card.jpg");

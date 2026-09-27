@@ -123,6 +123,8 @@ html, body {
 
 .C-Files{
     color: var(--color-2);
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .file-layout{
@@ -137,12 +139,13 @@ padding-bottom: 3rem;
     border-radius: 10px;
     text-align: center;
     height: 35rem;
+    margin-bottom: 1rem;
      
 }
 
 .Brief-Summary{
     color: red;
-     
+     font-size: 2rem;
 }
 
 .Character-Expo{
