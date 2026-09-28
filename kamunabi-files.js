@@ -1,7 +1,7 @@
 //I'm making a clock that counts down for chapter releases. I find this will be a helpful tool for manga fans, Some don't get updates
 // when the manga goes on a random hiatus due to health related issues or something else so this will be a useful tool me thinks :)
 
-const releaseDate = new Date("September 27, 2026 10:00:00").getTime(); //sets the release date, guess ill have to update this manually.
+const releaseDate = new Date("October 4, 2026 10:00:00").getTime(); //sets the release date, guess ill have to update this manually.
 
 const timerCount = setInterval(function() {
 
@@ -61,3 +61,14 @@ function screenPressed(photoId,activeSrc,normal){
 }
 
 screenPressed("Card-Img-1","assets/Chihiro-Card-2.jpg", "assets/chihiro-card.jpg");
+screenPressed("Card-Img-2","assets/kunishige-2.webp","assets/kunishigeeee.webp");
+screenPressed("Card-Img-3","assets/shiba-2.jpg","assets/togo shibaaaa.webp");
+screenPressed("Card-Img-4","assets/hakuri-2.webp","assets/hakuriiiii.webp");
+screenPressed("Card-Img-5","assets/hinao-2.webp","assets/hinaoooo.webp");
+screenPressed("Card-Img-6","assets/char-2.webp","assets/CHARRRR.webp");
+screenPressed("Card-Img-7","assets/hiyuki-2.jpg","assets/HIYUKIIIII.webp");
+screenPressed("Card-Img-8","assets/uruha-2.webp","assets/Uruhaaa.jpg");
+screenPressed("Card-Img-9","assets/samura-2.webp","assets/SAMURAAA.webp");
+screenPressed("Card-Img-10","assets/akemura-2.webp","assets/akemuraaa.jpg");
+screenPressed("Card-Img-11","assets/chiaki-2.webp","assets/chiakiiii.webp");
+screenPressed("Card-Img-12","assets/yura-2.webp","assets/yuraaaaaa 2.jpg");
