@@ -72,3 +72,5 @@ screenPressed("Card-Img-9","assets/samura-2.webp","assets/SAMURAAA.webp");
 screenPressed("Card-Img-10","assets/akemura-2.webp","assets/akemuraaa.jpg");
 screenPressed("Card-Img-11","assets/chiaki-2.webp","assets/chiakiiii.webp");
 screenPressed("Card-Img-12","assets/yura-2.webp","assets/yuraaaaaa 2.jpg");
+screenPressed("Card-Img-13", "assets/iori-2.jpg", "assets/iori-1.jpg",);
+screenPressed("Card-Img-14", "assets/natsuki-2.jpg", "assets/natsuki-1.jpg");

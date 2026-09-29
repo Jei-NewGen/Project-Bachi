@@ -159,11 +159,14 @@ padding-bottom: 3rem;
 .Additional-Text{
     color: red;
     font-style: oblique;
+    margin-top: 1rem;
+    
 }
 
 .Appearances{
     color: red;
     font-style: oblique;
+    margin-top: 1rem;
 }
 
 .Card-Top{
@@ -237,6 +240,10 @@ padding-bottom: 3rem;
     height: 12rem;
     object-fit: contain;
 }
+
+
+
+
 
 @keyframes colorChange {
     0%{
