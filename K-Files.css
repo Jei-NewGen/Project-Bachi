@@ -241,6 +241,27 @@ padding-bottom: 3rem;
     object-fit: contain;
 }
 
+.Chapter-Cover{
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
+
+.Chapter-Format{
+ text-align: center;
+
+}
+
+.Chapter-Title{
+    color: var(--color-2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Release-Date{
+    color: var(--color-2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 
 
 
