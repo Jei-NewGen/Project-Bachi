@@ -93,3 +93,4 @@ screenPressed("Card-Img-30", "assets/tamaki-2.webp", "assets/tamaki-1.webp");
 screenPressed("Card-Img-31","assets/ukizane-2.jpg", "assets/ukizane-1.jpg");
 screenPressed("Card-Img-32", "assets/yuki-2.webp", "assets/yuki-1.webp");
 screenPressed("Card-Img-33", "assets/sojo-2.png", "assets/sojo-1.jpg");
+screenPressed("Card-Img-34","assets/Yuu-2.png", "assets/Yuu-1.jpg");
