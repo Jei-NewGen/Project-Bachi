@@ -1,7 +1,7 @@
 //I'm making a clock that counts down for chapter releases. I find this will be a helpful tool for manga fans, Some don't get updates
 // when the manga goes on a random hiatus due to health related issues or something else so this will be a useful tool me thinks :)
 
-const releaseDate = new Date("October 18, 2026 10:00:00").getTime(); //sets the release date, guess ill have to update this manually.
+const releaseDate = new Date("October 25, 2026 10:00:00").getTime(); //sets the release date, guess ill have to update this manually.
 
 const timerCount = setInterval(function() {
 
