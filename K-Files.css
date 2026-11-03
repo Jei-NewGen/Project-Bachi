@@ -17,6 +17,33 @@ body{
     height: 100%;
 }
 
+.foot-container{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 25rem;
+    text-align: center;
+}
+
+.Footer-Links{
+color: white;
+font-family: Impact;
+text-align: center;
+
+}
+
+.Logos{
+    height: 3rem;
+    width:  3rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dont-Sue-me{
+    color: red; 
+}
+
 .navbar{
     border: 1px solid red;
     position: sticky;
@@ -103,17 +130,20 @@ html, body {
     flex-direction: column;
     align-items: center;
     margin-right: 0.5rem;
+    
 }
 
 .number{
-    color: white;
+    color: black;
     font-family: impact;
     line-height: 1;
     font-size: 2.1rem;
+    background-color: white;
     
 }
 .Chrono-Label{
     color: var(--color-2);
+    background-color: white;
 }
 
 .sojo{
@@ -125,11 +155,16 @@ html, body {
     color: var(--color-2);
     text-align: center;
     margin-bottom: 1rem;
-    
+    font-family: "Permanent Marker", cursive;
+    border-bottom: 2px solid white;
+    border-radius: 13rem;
 }
 
 .file-layout{
 padding-bottom: 3rem;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(5,1fr)
 }
 
 .Card-Layout{
@@ -141,7 +176,7 @@ padding-bottom: 3rem;
     text-align: center;
     height: 35rem;
     margin-bottom: 1rem;
-    background-color: #71797E;
+    background-color: #D8BFD8;
     
      
 }
@@ -274,6 +309,9 @@ padding-bottom: 3rem;
 .Chapter-Info-Section-Title{
     color: var(--color-2);
     text-align: center;
+    font-family: "Permanent Marker", cursive;
+    border-bottom: 2px solid white;
+    
     
 
 }
