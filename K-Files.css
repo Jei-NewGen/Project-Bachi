@@ -215,72 +215,6 @@ padding-bottom: 3rem;
     object-fit: contain;
 }
 
-.Card-Top-2{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-3{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-4{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-5{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-6{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-7{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-8{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-9{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-10{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-11{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
-.Card-Top-12{
-    width: 100%;
-    height: 12rem;
-    object-fit: contain;
-}
-
 .Chapter-Cover{
     width: 100%;
     height: 15rem;
@@ -393,6 +327,14 @@ padding-bottom: 3rem;
         display: grid;
         grid-template-columns: repeat(8,1fr);
         grid-template-rows: repeat(14, 1fr);
+    }
+
+    .Card-Top:hover{
+     transform: translateY(-4px);
+    }
+
+    .Chapter-Cover:hover{
+        transform: translateY(-8px);
     }
 }
 

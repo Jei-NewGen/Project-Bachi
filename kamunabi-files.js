@@ -58,6 +58,12 @@ function screenPressed(photoId,activeSrc,normal){
     pressedImg.addEventListener("touchstart", activeImg);
     pressedImg.addEventListener("touchend", backToNormal);
     pressedImg.addEventListener("touchcancel", backToNormal);
+ 
+    pressedImg.addEventListener("mousedown",activeImg);
+    pressedImg.addEventListener("mouseup", backToNormal);
+    pressedImg.addEventListener("mouseleave", backToNormal);
+
+
 }
 
 screenPressed("Card-Img-1","assets/Chihiro-Card-2.jpg", "assets/chihiro-card.jpg");
