@@ -22,11 +22,23 @@ const questions = [
     }
 ]
 
-function isAnswerCorrect(choice, correctAnswer){
-    if(choice === correctAnswer){
-        console.log("CORRECT!");
-    }
-    else{
-        console.log("INCORRECT!, NOT VERY BACHI OF YOU");
-    }
-}
+const targetQuestion = document.querySelector("#Quiz-1");
+
+targetQuestion.textContent = questions[0].question;
+
+const answerButton = getElementById("Answers");
+
+const currentQuestion = questions;
+
+answerButton.innerHTML = "";
+
+currentQuestion.choices.forEach(function(choices){
+
+const button = getElementById("Answers"); //wipes any old buttons from questions before
+
+button.textContent = choices; //puts text to show answer in the button
+
+button.classList.add("customize-answers"); //makes it so i can style the button 
+
+answerButton.appendChild(button); //puts the button inside the empty div 
+} );
