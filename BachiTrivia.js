@@ -22,23 +22,58 @@ const questions = [
     }
 ]
 
+let currentQuestionsIndex = 0;
+let score = 0;
+
+function displayQuestion(){
+
 const targetQuestion = document.querySelector("#Quiz-1");
+const answerBtn = document.getElementById("Answers");
 
-targetQuestion.textContent = questions[0].question;
+const currentQuestion = questions[currentQuestionsIndex];
 
-const answerButton = getElementById("Answers");
+targetQuestion.textContent = currentQuestion.question;
 
-const currentQuestion = questions;
-
-answerButton.innerHTML = "";
+answerBtn.innerHTML = "";
 
 currentQuestion.choices.forEach(function(choices){
 
-const button = getElementById("Answers"); //wipes any old buttons from questions before
+const button = document.getElementById("Answers"); //wipes any old buttons from questions before
 
 button.textContent = choices; //puts text to show answer in the button
 
 button.classList.add("customize-answers"); //makes it so i can style the button 
 
-answerButton.appendChild(button); //puts the button inside the empty div 
-} );
+
+button.addEventListener("click", function(){
+    checkAnswer(choices, currentQuestion.answer); //this took me about 15 mins to realize what this was doing lol its so simple too
+});
+
+answerBtn.appendChild(button); //puts the button inside the empty div 
+ });
+}
+
+
+//checks if button pressed is the correct answer
+function answerCheck(userAnswer, rightAnswer){
+    if(userAnswer === rightAnswer){
+        alert("CORRECT");
+        score++;
+    }
+    else{
+        alert("WRONG!!!!");
+    }
+}
+
+currentQuestionsIndex++;
+
+if(currentQuestionsIndex < questions.length){
+    displayQuestion();
+}
+else{
+    alert("You completed the quiz!" + score);
+    answerBtn.innerHTML = "";
+ }
+
+
+displayQuestion();
