@@ -25,10 +25,10 @@ const questions = [
 let currentQuestionsIndex = 0;
 let score = 0;
 
-function displayQuestion(){
-
 const targetQuestion = document.querySelector("#Quiz-1");
 const answerBtn = document.getElementById("Answers");
+
+function displayQuestion(){
 
 const currentQuestion = questions[currentQuestionsIndex];
 
@@ -38,7 +38,7 @@ answerBtn.innerHTML = "";
 
 currentQuestion.choices.forEach(function(choices){
 
-const button = document.getElementById("Answers"); //wipes any old buttons from questions before
+const button = document.createElement("button"); //wipes any old buttons from questions before
 
 button.textContent = choices; //puts text to show answer in the button
 
@@ -46,26 +46,36 @@ button.classList.add("customize-answers"); //makes it so i can style the button
 
 
 button.addEventListener("click", function(){
-    checkAnswer(choices, currentQuestion.answer); //this took me about 15 mins to realize what this was doing lol its so simple too
+    answerCheck(choices, currentQuestion.answer); //this took me about 15 mins to realize what this was doing lol its so simple too
 });
 
 answerBtn.appendChild(button); //puts the button inside the empty div 
  });
 }
 
+const popUpMsg = document.getElementById("Pop-Up-Msg");
 
 //checks if button pressed is the correct answer
 function answerCheck(userAnswer, rightAnswer){
+
+    
+    popUpMsg.classList.remove()
     if(userAnswer === rightAnswer){
-        alert("CORRECT");
+        popUpMsg.textContent = "CORRECT!!!!";
+        popUpMsg.classList.add("Correct-Answer");
         score++;
     }
     else{
-        alert("WRONG!!!!");
+        popUpMsg.textContent = "WRONG!!!!";
+        popUpMsg.classList.add("Wrong-Answer");
     }
-}
+
 
 currentQuestionsIndex++;
+
+setTimeout(function(){
+
+    popUpMsg.textContent = "";
 
 if(currentQuestionsIndex < questions.length){
     displayQuestion();
@@ -74,6 +84,7 @@ else{
     alert("You completed the quiz!" + score);
     answerBtn.innerHTML = "";
  }
-
+},1000);
+}
 
 displayQuestion();
