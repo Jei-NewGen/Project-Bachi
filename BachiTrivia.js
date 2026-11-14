@@ -19,7 +19,58 @@ const questions = [
         question: "Who appeared first, Kiri Shirakai or Kuguri",
         choices: ["Kuguri", "Kiri", "They arrived on the same panel and chapter"],
         answer: "Kuguri"
-    }
+    },
+    {
+        question: "Who saves Char when Sojo kidnaps her?",
+        choices: ["Samura", "Shiba", "Chihiro", "Hakuri"],
+        answer: "Chihiro"
+    },
+     {
+        question: "Who fought during the Irishima Talks?",
+        choices: ["Kunshige and Urita", "Shiba and Hiroto", "Azami and Hakuri"],
+        answer: "Shiba and Hiroto"
+    },
+     {
+        question: "What chapter does Chihiro lose to Akemura?",
+        choices: ["Chapter 61","Chapter 93","Chapter 108" ],
+        answer: "Chapter 108"
+    },
+     {
+        question: "Who lands the first blow in the fight between Sojo and Chihiro in their first fight?",
+        choices: ["Sojo", "Chihiro",],
+        answer: "Sojo"
+    },
+     {
+        question: "Which technique does Chihiro absorb from Sojo?",
+        choices: ["Mei", "Bachi no Kagura", "Nishiki", "Banquet"],
+        answer: "Mei"
+    },
+     {
+        question: "What technique does Akemura use to drill a hole into Kamunabi HQ?",
+        choices: ["Super Akemura Attack", "Makankasappo", "Bee", "Centipede"],
+        answer: "Bee"
+    },
+     {
+        question: "Does Samura land a hit on Akemura during their battle?",
+        choices: ["Yes","No"],
+        answer: "Yes"
+    },
+     {
+        question: "True or False: Kunishige was the strongest fighter up until his death?",
+        choices: ["True", "False"],
+        answer: "False"
+    },
+     {
+        question: "True or False: Magatsumi is the blade wielded by Uruha",
+        choices: ["True", "False"],
+        answer: "False"
+    },
+     {
+        question: "Who was Hakuri's abuser?",
+        choices: ["Chihiro", "Kyora", "Tenri", "Soya"],
+        answer: "Soya"
+    },
+
 ]
 
 let currentQuestionsIndex = 0;
@@ -55,15 +106,23 @@ answerBtn.appendChild(button); //puts the button inside the empty div
 
 const popUpMsg = document.getElementById("Pop-Up-Msg");
 
+//displays points on screen and stores them
+let pointsTotal = Number(localStorage.getItem("pointsTotal")) //takes existing points or starts with 0 for new user
+const displayPoints = document.getElementById("points-counter");
+displayPoints.textContent = pointsTotal;
+
 //checks if button pressed is the correct answer
 function answerCheck(userAnswer, rightAnswer){
 
     
     popUpMsg.classList.remove()
     if(userAnswer === rightAnswer){
+        pointsTotal += 20; //adds 20 points for right answers
+        localStorage.setItem("pointsTotal", pointsTotal); //sets the points into storage so it can be used here and in the gacha section
+        displayPoints.textContent = pointsTotal;  //updates points immediately on screen
+
         popUpMsg.textContent = "CORRECT!!!!";
         popUpMsg.classList.add("Correct-Answer");
-        score++;
     }
     else{
         popUpMsg.textContent = "WRONG!!!!";

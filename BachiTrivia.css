@@ -193,3 +193,13 @@ html, body {
     color: red;
     font-weight: bold;
 }
+
+#display-points{
+    position: fixed;
+    color: white;
+    border: 1px solid red;
+    border-radius: 2rem;
+    font-family: "Cantarell", sans-serif;
+    font-weight: bold;
+    z-index: 1000;
+}
