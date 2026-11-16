@@ -76,8 +76,29 @@ const questions = [
 let currentQuestionsIndex = 0;
 let score = 0;
 
+const quizTime = 10000;
+let quizUnlock = Number(localStorage.getItem("playerPoints")) || 0;
+
 const targetQuestion = document.querySelector("#Quiz-1");
 const answerBtn = document.getElementById("Answers");
+
+//checks if quiz is on cooldown
+function quizStart(){
+    const currentTime = Date.now();
+    if(currentTime < quizUnlock){
+        alert("Quiz is on cooldown. Come Back shortly");
+        return false;
+    }
+    return true;
+}
+
+function timeUntilQuiz(){
+    const time = new Date(quizUnlock).toLocaleTimeString([],{
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+}
 
 function displayQuestion(){
 
@@ -140,10 +161,11 @@ if(currentQuestionsIndex < questions.length){
     displayQuestion();
 }
 else{
-    alert("You completed the quiz!" + score);
-    answerBtn.innerHTML = "";
+    quizUnlock = Date.now() + quizTime;
+    localStorage.setItem("cooldownTime", quizUnlock);
+    timeUntilQuiz();
  }
 },1000);
 }
 
-displayQuestion();
+
