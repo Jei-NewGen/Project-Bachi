@@ -74,73 +74,72 @@ const questions = [
 ]
 
 let currentQuestionsIndex = 0;
+const questionsPerQuiz = 5;
 let score = 0;
 
 const quizTime = 10000;
-let quizUnlock = Number(localStorage.getItem("playerPoints")) || 0;
+let quizUnlock = Number(localStorage.getItem("cooldownTime")) || 0;
 
 const targetQuestion = document.querySelector("#Quiz-1");
 const answerBtn = document.getElementById("Answers");
+const popUpMsg = document.getElementById("Pop-Up-Msg");
+const displayPoints = document.getElementById("points-counter");
 
-//checks if quiz is on cooldown
+let pointsTotal = Number(localStorage.getItem("pointsTotal")) || 0;
+displayPoints.textContent = pointsTotal;
+
+// checks if quiz is on cooldown
 function quizStart(){
     const currentTime = Date.now();
+
     if(currentTime < quizUnlock){
-        alert("Quiz is on cooldown. Come Back shortly");
-        return false;
+        timeUntilQuiz(); 
     }
-    return true;
+    else{
+        localStorage.removeItem("cooldownTime");
+        displayQuestion();
+    }
 }
 
 function timeUntilQuiz(){
-    const time = new Date(quizUnlock).toLocaleTimeString([],{
+    const counterTime = new Date(quizUnlock).toLocaleTimeString([],{
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit"
     });
+
+    answerBtn.innerHTML = "";
+    popUpMsg.textContent = "";
+    targetQuestion.textContent = "Next questions appear at " + counterTime;
 }
 
 function displayQuestion(){
+    const currentQuestion = questions[currentQuestionsIndex];
+    targetQuestion.textContent = currentQuestion.question;
+    answerBtn.innerHTML = "";
 
-const currentQuestion = questions[currentQuestionsIndex];
+    currentQuestion.choices.forEach(function(choices){
+        const button = document.createElement("button"); // creates a new button
+        button.textContent = choices; // puts text to show answer in the button
+        button.classList.add("customize-answers"); // makes it so i can style the button 
 
-targetQuestion.textContent = currentQuestion.question;
+        button.addEventListener("click", function(){
+            answerCheck(choices, currentQuestion.answer); 
+        });
 
-answerBtn.innerHTML = "";
-
-currentQuestion.choices.forEach(function(choices){
-
-const button = document.createElement("button"); //wipes any old buttons from questions before
-
-button.textContent = choices; //puts text to show answer in the button
-
-button.classList.add("customize-answers"); //makes it so i can style the button 
-
-
-button.addEventListener("click", function(){
-    answerCheck(choices, currentQuestion.answer); //this took me about 15 mins to realize what this was doing lol its so simple too
-});
-
-answerBtn.appendChild(button); //puts the button inside the empty div 
- });
+        answerBtn.appendChild(button); // puts the button inside the empty div 
+    });
 }
 
-const popUpMsg = document.getElementById("Pop-Up-Msg");
-
-//displays points on screen and stores them
-let pointsTotal = Number(localStorage.getItem("pointsTotal")) //takes existing points or starts with 0 for new user
-const displayPoints = document.getElementById("points-counter");
-displayPoints.textContent = pointsTotal;
-
-//checks if button pressed is the correct answer
+// checks if button pressed is the correct answer
 function answerCheck(userAnswer, rightAnswer){
-
     
-    popUpMsg.classList.remove()
+    popUpMsg.classList.remove("Correct-Answer", "Wrong-Answer");
+
     if(userAnswer === rightAnswer){
-        pointsTotal += 20; //adds 20 points for right answers
-        localStorage.setItem("pointsTotal", pointsTotal); //sets the points into storage so it can be used here and in the gacha section
-        displayPoints.textContent = pointsTotal;  //updates points immediately on screen
+        pointsTotal += 20; // adds 20 points for right answers
+        localStorage.setItem("pointsTotal", pointsTotal); // sets the points into storage
+        displayPoints.textContent = pointsTotal; // updates points immediately on screen
 
         popUpMsg.textContent = "CORRECT!!!!";
         popUpMsg.classList.add("Correct-Answer");
@@ -150,22 +149,20 @@ function answerCheck(userAnswer, rightAnswer){
         popUpMsg.classList.add("Wrong-Answer");
     }
 
+    currentQuestionsIndex++;
 
-currentQuestionsIndex++;
+    setTimeout(function(){
+        popUpMsg.textContent = "";
 
-setTimeout(function(){
-
-    popUpMsg.textContent = "";
-
-if(currentQuestionsIndex < questions.length){
-    displayQuestion();
-}
-else{
-    quizUnlock = Date.now() + quizTime;
-    localStorage.setItem("cooldownTime", quizUnlock);
-    timeUntilQuiz();
- }
-},1000);
+        if(currentQuestionsIndex <  questionsPerQuiz && currentQuestionsIndex < questions.length){
+            displayQuestion();
+        }
+        else{
+            quizUnlock = Date.now() + quizTime;
+            localStorage.setItem("cooldownTime", quizUnlock);
+            timeUntilQuiz();
+        }
+    }, 1000);
 }
 
-
+quizStart();
