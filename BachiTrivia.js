@@ -166,3 +166,78 @@ function answerCheck(userAnswer, rightAnswer){
 }
 
 quizStart();
+
+const dataForPoll = {
+    question: "Which sword would you want to wield?",
+    selections: [
+        {name: "Enten", votes: 20},
+        {name: "Magatsumi", votes: 10},
+        {name: "Kumeyuri", votes: 10},
+        {name: "Tobimune", votes: 10}     
+        
+    ]
+};
+
+const pollTopic = document.getElementById("Question-Poll");
+const pollOptions = document.getElementById("Poll-Choices");
+const pollResult = document.getElementById("Poll-Results");
+
+let votedAlr = localStorage.getItem("alreadyVoted");
+
+function showPoll(){
+    pollTopic.textContent = dataForPoll.question;
+    pollOptions.innerHTML = "";
+
+    if(votedAlr === true){
+        pollResultsReveal();
+        return;
+    }
+
+    dataForPoll.selections.forEach(function(name, index){
+        const pollButton = document.createElement("pollButton");
+        pollButton.textContent = name.text;
+        pollButton.classList.add("customize-answers");
+
+        pollButton.addEventListener("click", function(){
+            deliverVote(index);
+        });
+        
+        pollOptions.appendChild(pollButton);
+    })
+}
+
+function deliverVote(selectedVote){
+dataForPoll.selections[selectedVote].votes++;
+
+localStorage.setItem("alreadyVoted","true");
+hasVoted = "true";
+
+let currentPoints = Number(localStorage.getItem("pointsTotal")) || 0;
+currentPoints += 10;
+localStorage.setItem("pointsTotal", currentPoints);
+
+ document.getElementById("points-counter").textContent = currentPoints;
+ pollResult.textContent = "Thanks for voting! An additional 10 Bachi coins for voting!";
+
+ showPoll();
+}
+
+function pollResultsReveal(){
+    pollOptions.innerHTML = "";
+    let completeVotes = 0;
+    
+    dataForPoll.selections.forEach(function(name){
+        completeVotes += name.votes;
+    });
+    
+    dataForPoll.selections.forEach(function(name){
+    const calculation = Math.round((name.votes / completeVotes) * 100);
+    const resultsCalculated = document.createElemnt("calcResults");
+    resultsCalculated.classList.add("calcResultsClass");
+    resultsCalculated.textContent = name.text + "-" + calculation + "% (" + name.votes + "votes";
+
+    pollOptions.appendChild(resultsCalculated);
+    });
+}
+
+showPoll();
