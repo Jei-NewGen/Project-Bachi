@@ -188,14 +188,14 @@ function showPoll(){
     pollTopic.textContent = dataForPoll.question;
     pollOptions.innerHTML = "";
 
-    if(votedAlr === true){
+    if(votedAlr === "true"){
         pollResultsReveal();
         return;
     }
 
     dataForPoll.selections.forEach(function(name, index){
-        const pollButton = document.createElement("pollButton");
-        pollButton.textContent = name.text;
+        const pollButton = document.createElement("button");
+        pollButton.textContent = name.name;
         pollButton.classList.add("customize-answers");
 
         pollButton.addEventListener("click", function(){
@@ -210,7 +210,7 @@ function deliverVote(selectedVote){
 dataForPoll.selections[selectedVote].votes++;
 
 localStorage.setItem("alreadyVoted","true");
-hasVoted = "true";
+votedAlr = "true";
 
 let currentPoints = Number(localStorage.getItem("pointsTotal")) || 0;
 currentPoints += 10;
@@ -232,9 +232,9 @@ function pollResultsReveal(){
     
     dataForPoll.selections.forEach(function(name){
     const calculation = Math.round((name.votes / completeVotes) * 100);
-    const resultsCalculated = document.createElemnt("calcResults");
+    const resultsCalculated = document.createElement("div");
     resultsCalculated.classList.add("calcResultsClass");
-    resultsCalculated.textContent = name.text + "-" + calculation + "% (" + name.votes + "votes";
+    resultsCalculated.textContent = name.name + "-" + calculation + "% (" + name.votes + "votes";
 
     pollOptions.appendChild(resultsCalculated);
     });
