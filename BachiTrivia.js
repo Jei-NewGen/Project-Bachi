@@ -73,7 +73,7 @@ const questions = [
 
 ]
 
-let currentQuestionsIndex = 0;
+let currentQuestionsIndex = Number(localStorage.getItem("savedQuestionIndex"));
 const questionsPerQuiz = 5;
 let score = 0;
 
@@ -97,6 +97,8 @@ function quizStart(){
     }
     else{
         localStorage.removeItem("cooldownTime");
+        localStorage.removeItem("savedQuestionIndex");
+        currentQuestionsIndex = 0;
         displayQuestion();
     }
 }
@@ -150,6 +152,7 @@ function answerCheck(userAnswer, rightAnswer){
     }
 
     currentQuestionsIndex++;
+    localStorage.setItem("savedQuestionIndex", currentQuestionsIndex);
 
     setTimeout(function(){
         popUpMsg.textContent = "";

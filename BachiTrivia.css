@@ -217,3 +217,9 @@ html, body {
     margin-bottom: 2rem;
 
 }
+
+.Poll-Header{
+    color:white;
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+}
