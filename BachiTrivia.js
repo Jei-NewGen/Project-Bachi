@@ -173,29 +173,32 @@ quizStart();
 const dataForPoll = {
     question: "Which sword would you want to wield?",
     selections: [
-        {name: "Enten", votes: 20},
-        {name: "Magatsumi", votes: 10},
+        {name: "Enten", votes: 10},
+        {name: "Magatsumi", votes: 20},
         {name: "Kumeyuri", votes: 10},
         {name: "Tobimune", votes: 10}     
         
     ]
 };
 
+//gets the ids for all elements i need to change or well show
 const pollTopic = document.getElementById("Question-Poll");
 const pollOptions = document.getElementById("Poll-Choices");
 const pollResult = document.getElementById("Poll-Results");
 
-let votedAlr = localStorage.getItem("alreadyVoted");
+let votedAlr = localStorage.getItem("alreadyVoted"); //checks if user has already voted
 
 function showPoll(){
     pollTopic.textContent = dataForPoll.question;
     pollOptions.innerHTML = "";
 
+    //if they have already voted it shows the cuurent results instead of polls
     if(votedAlr === "true"){
         pollResultsReveal();
         return;
     }
 
+    //makes the buttons for the poll options and so whichever button is clicked it is the one that gains the increase in score
     dataForPoll.selections.forEach(function(name, index){
         const pollButton = document.createElement("button");
         pollButton.textContent = name.name;
@@ -208,7 +211,7 @@ function showPoll(){
         pollOptions.appendChild(pollButton);
     })
 }
-
+//gives gacha points for voting and tracks votes 
 function deliverVote(selectedVote){
 dataForPoll.selections[selectedVote].votes++;
 
@@ -228,11 +231,13 @@ localStorage.setItem("pointsTotal", currentPoints);
 function pollResultsReveal(){
     pollOptions.innerHTML = "";
     let completeVotes = 0;
-    
+
+    //adds up all votes which includes every option
     dataForPoll.selections.forEach(function(name){
         completeVotes += name.votes;
     });
     
+    //divides the options votes by all votes to get a percentage thats rounded
     dataForPoll.selections.forEach(function(name){
     const calculation = Math.round((name.votes / completeVotes) * 100);
     const resultsCalculated = document.createElement("div");
@@ -243,4 +248,5 @@ function pollResultsReveal(){
     });
 }
 
-showPoll();
+showPoll(); //starts the poll
+//forEach, a mini function basically, it takes multiple choices and goes through them one by one.
