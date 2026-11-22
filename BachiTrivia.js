@@ -75,7 +75,7 @@ const questions = [
 
 let currentQuestionsIndex = Number(localStorage.getItem("savedQuestionIndex"));
 const questionsPerQuiz = 5;
-let score = 0;
+let score = Number(localStorage.getItem("savedScore")) || 0;
 
 const quizTime = 10000;
 let quizUnlock = Number(localStorage.getItem("cooldownTime")) || 0;
@@ -84,6 +84,7 @@ const targetQuestion = document.querySelector("#Quiz-1");
 const answerBtn = document.getElementById("Answers");
 const popUpMsg = document.getElementById("Pop-Up-Msg");
 const displayPoints = document.getElementById("points-counter");
+const rankReceived = document.getElementById("YourRankResult");
 
 let pointsTotal = Number(localStorage.getItem("pointsTotal")) || 0;
 displayPoints.textContent = pointsTotal;
@@ -96,9 +97,12 @@ function quizStart(){
         timeUntilQuiz(); 
     }
     else{
+        rankReceived.innerHTML = "";
         localStorage.removeItem("cooldownTime");
         localStorage.removeItem("savedQuestionIndex");
+        localStorage.removeItem("savedScore");
         currentQuestionsIndex = 0;
+        score = 0;
         displayQuestion();
     }
 }
@@ -113,6 +117,7 @@ function timeUntilQuiz(){
     answerBtn.innerHTML = "";
     popUpMsg.textContent = "";
     targetQuestion.textContent = "Next questions appear at " + counterTime;
+    rankingResult();
 }
 
 function displayQuestion(){
@@ -139,6 +144,8 @@ function answerCheck(userAnswer, rightAnswer){
     popUpMsg.classList.remove("Correct-Answer", "Wrong-Answer");
 
     if(userAnswer === rightAnswer){
+        score++;
+        localStorage.setItem("savedScore", score);
         pointsTotal += 20; // adds 20 points for right answers
         localStorage.setItem("pointsTotal", pointsTotal); // sets the points into storage
         displayPoints.textContent = pointsTotal; // updates points immediately on screen
@@ -249,4 +256,28 @@ function pollResultsReveal(){
 }
 
 showPoll(); //starts the poll
-//forEach, a mini function basically, it takes multiple choices and goes through them one by one.
+//forEach, a mini function basically, it takes multiple choices and goes through them one by one
+
+function rankingResult(){
+    let title = "";
+    let rankImg = "";
+
+    if(score === 5){
+        title = "SwordSaint";
+        rankImg = "assets/SwordSaintRank (1).png";
+    }
+    else if(score >= 3){
+        title = "BladeBearer";
+        rankImg = "assets/SwordBearerRankCard.png";
+    }
+    else if(score >= 1){
+       title = "KamunabiAgent";
+       rankImg = "assets/AGENTRANK.png";
+    }
+    else{
+        title = "GRUNT";
+        rankImg = "assets/GruntRANK.png";
+    }
+
+   rankReceived.innerHTML = "<h3>Rank achieved: " + title + " (" + score + "/5)</h3>" + "<img src='" + rankImg + "' class='RankPicFormat' alt='" + title + "'>";
+}

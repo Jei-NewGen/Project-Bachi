@@ -74,7 +74,7 @@ html, body {
   min-height: 100vh;
   overflow-x: hidden; 
   overflow-y: auto;
-  padding-bottom: 6rem;
+  padding-bottom: 1rem;
 }
 
 .Title-Section{
