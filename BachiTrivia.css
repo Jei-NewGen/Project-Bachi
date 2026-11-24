@@ -221,5 +221,35 @@ html, body {
 .Poll-Header{
     color:white;
     text-align: center;
-    font-family: "Permanent Marker", cursive;
 }
+
+@media (min-width: 768px){
+    .Rank-Images{
+        margin-left: 5rem;
+    }
+
+    .Secondary-Header{
+        text-align: center;
+    }
+
+    .foot-container{
+        height: 16rem;
+    }
+
+    .navbar{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .Rank-Images{
+        margin-left: 15rem;
+    }
+
+    .navbar a:hover{
+      color: white;
+    }
+
+    
+}
+   
