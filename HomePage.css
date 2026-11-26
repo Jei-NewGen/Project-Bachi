@@ -78,3 +78,28 @@ html, body {
   padding-bottom: 1rem;
 }
 
+.GreetingHeader{
+    color: red;
+    font-family: Permanent Marker;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.Introductions{
+    color: red;
+    font-family: Canterall;
+    text-align: center;
+}
+
+.News-Header{
+    color: red;
+    font-family: Permanent Marker;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.News-Detail{
+    color: white;
+    font-family: Canterall;
+    text-align: center;
+}
